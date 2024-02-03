@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Places Near Me</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <h1>Places Near Me</h1>
+    <form action="/" method="post">
+        <label for="user_zip">Enter your zip code:</label>
+        <input name="user_zip" type="text" id="user_zip" required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if places_near_me %}
+        <h2>Places Near You</h2>
+        <ul>
+            {% for place in places_near_me %}
+                <li>{{ place }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+</body>
+</html>

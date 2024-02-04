@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Places Near Me</title>
-    <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 </head>
 <body>
-    <h1>Places Near Me</h1>
-    <form action="/" method="post">
-        <label for="user_zip">Enter your zip code:</label>
-        <input name="user_zip" type="text" id="user_zip" required>
-        <button type="submit">Search</button>
-    </form>
+    <div class="home">
+        <h1>Places Near Me NYC</h1>
+        <div class="search">
+            <form action="/" method="post">
+                <input class="search-bar" name="user_zip" type="text" id="user_zip" placeholder="Enter your zip code" required>
+                <button class="submit-button" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
 
-    {% if places_near_me %}
-        <h2>Places Near You</h2>
-        <ul>
-            {% for place in places_near_me %}
-                <li>{{ place }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+    <div class="result">
+        {% if places_near_me %}
+            <ul>
+                {% for place in places_near_me %}
+                    <p class="results"><a class="link" href="https://www.google.com/search?q={{ place }}" target="_blank">{{ place }}</a></p>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
 
 </body>
 </html>

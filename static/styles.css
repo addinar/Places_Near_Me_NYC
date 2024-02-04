@@ -1,0 +1,71 @@
+body {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1 {
+    font-family:"didot", sans-serif;
+}
+.home {
+    margin-top: 250px
+}
+.search {
+    font-family:"didot", sans-serif;
+    border: 2px solid #000;
+    padding: 20px
+}
+
+.search-bar {
+    font-family:"didot", sans-serif;
+    border: 2px solid #4CAF50; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    font-size: 20px
+}
+
+.search-bar:hover {
+    border-color: #CA4343
+}
+
+.submit-button {
+    padding: 10px 20px; /* Add padding for better spacing */
+    background-color: #4CAF50; /* Set the background color */
+    color: #fff; /* Set the text color */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 16px; /* Set the font size */
+}
+
+.submit-button:hover {
+    background-color: #CA4343
+}
+
+.result {
+    margin-top: 30px
+}
+
+.results {
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-family:"didot", sans-serif;
+    font-size: 20px
+}
+
+.link {
+    color: #4CAF50
+}
+
+.link:hover{
+    color: #CA4343
+}
+
+.link:visited {
+    color: #CA4343
+}
+

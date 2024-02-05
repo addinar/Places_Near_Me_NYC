@@ -20,8 +20,9 @@ def index(): #defines a route for handling form submissions and displaying the r
 
         for zip_code_info in zif:
             zip_code = zip_code_info["modzcta"]
+            within = zip_code_info["label"]
             coordinates = zip_code_info['the_geom']['coordinates'][0][0]
-            if zip_code == str(user_zip):
+            if str(user_zip) == zip_code or str(user_zip) in within:
                 # print(zip_code)
                 for area in data:
                     point = area[8]
